@@ -30,7 +30,7 @@
     @include mixins.reset-list;
 
     display: flex;
-    column-gap: 1rem;
+    flex-wrap: wrap;
     padding-inline-end: 1em;
   }
 
@@ -38,6 +38,9 @@
     &>a {
       @include mixins.reset-anchor;
 
+      display: inline-block;
+      padding-block: 1em;
+      padding-inline: 0.875em;
       font-weight: 600;
     }
   }
