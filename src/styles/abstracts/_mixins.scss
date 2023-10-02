@@ -1,0 +1,9 @@
+@mixin reset-list {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+@mixin reset-anchor {
+  text-decoration: none;
+  color: inherit;
+}

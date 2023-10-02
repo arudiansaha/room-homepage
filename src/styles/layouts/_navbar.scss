@@ -1,0 +1,44 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-block: 2rem;
+  padding-inline: 0.75rem;
+  transform: translateY(-112px);
+  transition: transform 500ms ease-in-out;
+  background-color: variables.$color-primary-00;
+
+  &.active {
+    transform: translateY(0);
+  }
+
+  &__button {
+    padding: 1em;
+    border: none;
+    background-color: transparent;
+  }
+
+  &__list {
+    @include mixins.reset-list;
+
+    display: flex;
+    column-gap: 1rem;
+    padding-inline-end: 1em;
+  }
+
+  &__item {
+    &>a {
+      @include mixins.reset-anchor;
+
+      font-weight: 600;
+    }
+  }
+}
