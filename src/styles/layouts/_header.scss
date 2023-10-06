@@ -1,5 +1,5 @@
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 10;
@@ -7,7 +7,7 @@
   align-items: center;
   width: 100%;
   margin-block: 2rem;
-  margin-inline: 0.75rem;
+  padding-inline-start: 0.75rem;
 
   &__button {
     padding: 1em;
