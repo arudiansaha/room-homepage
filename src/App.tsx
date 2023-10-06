@@ -1,4 +1,5 @@
 import Carousel from './components/Carousel';
+import FooterAbout from './components/FooterAbout';
 import NavigationHeader from './components/NavigationHeader';
 
 export default function App() {
@@ -6,6 +7,7 @@ export default function App() {
     <>
       <NavigationHeader />
       <Carousel />
+      <FooterAbout />
     </>
   );
 }
