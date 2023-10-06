@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { TouchEvent, useState } from 'react';
 import CarouselBox from './CarouselBox';
 import CarouselCover from './CarouselCover';
 import CarouselDescription from './CarouselDescription';
@@ -16,6 +16,16 @@ import mobileHeroThree from '/images/heros/mobile-image-hero-3.jpg';
 
 export default function Carousel() {
   const [position, setPosition] = useState<number>(0);
+
+  const moveHandler = (event: TouchEvent<HTMLPictureElement>) => {
+    if (event.touches[0].clientX > (screen.width / 2) && position !== -200) {
+      setPosition(position - 100);
+    }
+
+    if (event.touches[0].clientX < (screen.width / 2) && position !== 0) {
+      setPosition(position + 100);
+    }
+  };
 
   const descriptions = [
     {
@@ -41,6 +51,7 @@ export default function Carousel() {
             srcSet={desktopHeroOne}
             src={mobileHeroOne}
             alt="white chair with table"
+            onTouchStart={moveHandler}
           />
           <CarouselDirection
             onPrevClick={() => setPosition(position - 200)}
@@ -56,6 +67,7 @@ export default function Carousel() {
             srcSet={desktopHeroTwo}
             src={mobileHeroTwo}
             alt="three chairs with different colors"
+            onTouchStart={moveHandler}
           />
           <CarouselDirection
             onPrevClick={() => setPosition(position + 100)}
@@ -71,6 +83,7 @@ export default function Carousel() {
             srcSet={desktopHeroThree}
             src={mobileHeroThree}
             alt="black chair"
+            onTouchStart={moveHandler}
           />
           <CarouselDirection
             onPrevClick={() => setPosition(position + 100)}
