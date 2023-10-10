@@ -44,7 +44,7 @@ export default function Carousel() {
   ];
 
   return (
-    <main className="carousel" aria-label="gallery">
+    <main className="carousel" id="content" aria-label="gallery">
       <ol className="carousel__list">
         <CarouselBox position={position}>
           <CarouselCover

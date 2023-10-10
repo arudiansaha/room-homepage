@@ -22,10 +22,10 @@ export default function NavigationBar({
         <img src={closeIcon} alt="" />
       </button>
       <ul className="navbar__list">
-        <li className="navbar__item"><a href="#home">home</a></li>
-        <li className="navbar__item"><a href="#shop">shop</a></li>
-        <li className="navbar__item"><a href="#about">about</a></li>
-        <li className="navbar__item"><a href="#contact">contact</a></li>
+        <li className="navbar__item"><a href="/home">home</a></li>
+        <li className="navbar__item"><a href="/shop">shop</a></li>
+        <li className="navbar__item"><a href="/about">about</a></li>
+        <li className="navbar__item"><a href="/contact">contact</a></li>
       </ul>
     </nav>
   );
