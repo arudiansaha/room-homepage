@@ -27,13 +27,13 @@
   &__cover {
     width: 100%;
     height: 100%;
+  }
 
-    &>.carousel__image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 
   &__direction {
@@ -96,13 +96,15 @@
     }
 
     &__cover {
-      flex-basis: 58.3%;
-      width: 100%;
-      height: 100%;
+      width: 58.3%;
+    }
+
+    &__image {
+      height: 70vh;
     }
 
     &__direction {
-      right: 41.7%;
+      right: 41.75%;
       bottom: 0;
       transform: translateX(160.8px);
     }
@@ -113,11 +115,11 @@
     }
 
     &__description {
-      flex-basis: 41.7%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      width: 41.7%;
     }
 
     &__title,
